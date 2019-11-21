@@ -57,7 +57,7 @@ co(function* () {
     fs.mkdirsSync(`build`);
     fs.copySync(`./composer.json`, 'TinyPNG/composer.json');
     fs.copySync(`./composer.lock`, `TinyPNG/composer.lock`);
-    fs.copySync(`./LICENSE`, `Zoho/LICENSE`);
+    fs.copySync(`./LICENSE`, `TinyPNG/LICENSE`);
     fs.copySync(`./Engine.php`, `TinyPNG/Engine.php`);
     fs.copySync(`./Hook.php`, `TinyPNG/Hook.php`);
     fs.copySync(`./ServiceProvider.php`, `TinyPNG/ServiceProvider.php`);
