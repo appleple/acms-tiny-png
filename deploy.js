@@ -60,6 +60,7 @@ co(function* () {
     fs.copySync(`./LICENSE`, `TinyPNG/LICENSE`);
     fs.copySync(`./Engine.php`, `TinyPNG/Engine.php`);
     fs.copySync(`./Hook.php`, `TinyPNG/Hook.php`);
+    fs.copySync(`./Corrector.php`, `TinyPNG/Corrector.php`);
     fs.copySync(`./ServiceProvider.php`, `TinyPNG/ServiceProvider.php`);
     yield systemCmd(`cd ./TinyPNG; composer install`);
     yield zipPromise(`TinyPNG`, `./build/TinyPNG.zip`);
