@@ -53,7 +53,7 @@ class ServiceProvider extends ACMS_App
         $corrector->attach('TinyPNG_Corrector', new Corrector);
 
         App::singleton('tiny_png', function () {
-            return new Engine('VY35VPxmDzRpWSfnWYWtQfn7H98LmCr6');
+            return new Engine(config('tiny_png_api_key'));
         });
 
     }
