@@ -1,6 +1,6 @@
 {
   "name": "acms-tiny-png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TinyPNGを使った画像のロスレス圧縮プラグインです。",
   "main": "deploy.js",
   "scripts": {
