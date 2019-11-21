@@ -21,7 +21,7 @@ class Engine
             'method' => $type,
         );
         if ($width > 0) {
-            $option['height'] = $width;
+            $option['width'] = $width;
         }
         if ($height > 0) {
             $option['height'] = $height;
