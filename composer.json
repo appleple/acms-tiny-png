@@ -1,0 +1,13 @@
+{
+    "name": "appleple/acms-tiny-png",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "atsu666",
+            "email": "ito.atsu666@gmail.com"
+        }
+    ],
+    "require": {
+        "tinify/tinify": "^1.5"
+    }
+}
