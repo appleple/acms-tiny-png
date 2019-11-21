@@ -15,8 +15,17 @@ class Engine
         $source->toFile($to);
     }
 
-    public function resize($from, $to, $option)
+    public function resize($from, $to, $type, $width, $height)
     {
+        $option = array(
+            'method' => $type,
+        );
+        if ($width > 0) {
+            $option['height'] = $width;
+        }
+        if ($height > 0) {
+            $option['height'] = $height;
+        }
         $source = \Tinify\fromFile($from);
         $resized = $source->resize($option);
         $resized->toFile($to);

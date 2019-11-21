@@ -13,8 +13,8 @@ class Corrector
      */
     public function resizeTinyPng($src, $args)
     {
-        $type = isset($args[0]) ? $args[0] : 'fit'; // scale | fit | cover | thumb
-        $width = isset($args[1]) ? intval($args[1]) : 300;
+        $type = isset($args[0]) ? $args[0] : 'scale'; // scale | fit | cover | thumb
+        $width = isset($args[1]) ? intval($args[1]) : 0;
         $height = isset($args[2]) ? intval($args[2]) : 0;
         $pfx = 'mode_tinypng_';
         if (!empty($width)) {
@@ -50,18 +50,8 @@ class Corrector
         if (!$xy = Storage::getImageSize($srcPath)) {
             return $src;
         }
-        $ratio = $xy[1] / $xy[0];
-        $option = array(
-            'method' => $type,
-            'width' => $width,
-        );
-        if ($height > 0) {
-            $option['height'] = $height;
-        } else {
-            $option['height'] = intval($width * $ratio);
-        }
         $engine = \App::make('tiny_png');
-        $engine->resize($srcPath, $destPath, $option);
+        $engine->resize($srcPath, $destPath, $type, $width, $height);
 
         return $destPathVars;
     }
